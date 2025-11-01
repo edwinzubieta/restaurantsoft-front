@@ -1,16 +1,58 @@
-# React + Vite
+# Documentación del Frontend (`restaurante-frontend/README.md`)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+explica cómo conectarse al backend y correr la aplicación de React.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Frontend del Sistema de Pedidos de Restaurante 📱
 
-## React Compiler
+Esta es la interfaz de usuario (UI) para la aplicación de gestión de pedidos, construida con React y Vite.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías Utilizadas
+* **React**
+* **Vite** (Herramienta de frontend)
+* **Axios** (Para peticiones a la API)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cómo Empezar
+
+Sigue estos pasos para levantar el entorno de desarrollo local.
+
+### 1. Prerrequisitos
+* Tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior).
+* **Importante:** El [servidor del backend](https://github.com/TU_USUARIO/restaurante-backend) debe estar corriendo en `http://localhost:4000`.
+
+### 2. Instalación
+1.  Clona el repositorio:
+    ```bash
+    git clone [https://github.com/TU_USUARIO/restaurante-frontend.git](https://github.com/edwinzubieta/restaurantsoft-front.git)
+    ```
+2.  Entra en la carpeta del proyecto:
+    ```bash
+    cd restaurante-frontend
+    ```
+3.  Instala las dependencias:
+    ```bash
+    npm install
+    ```
+
+### 3. Configuración del Entorno (Mejora Opcional pero Correcta)
+
+Para evitar tener la URL de la API "quemada" en el código, podemos usar un archivo `.env`.
+
+1.  Crea un archivo `.env` en la raíz del proyecto.
+2.  Añade la siguiente línea (Vite requiere el prefijo `VITE_`):
+    ```
+    VITE_API_URL=http://localhost:4000/api
+    ```
+3.  En el código  `TomarPedido.jsx`, se usara la URL:
+     `const API_URL = import.meta.env.VITE_API_URL;`
+
+### 4. Ejecutar la Aplicación
+Inicia el servidor de desarrollo de Vite:
+```bash
+npm run dev 
+```
+
+### 5. puerto de ejecucion
+1. Se ejecuta la aplicacionen el puerto 5173 o en el que indique la terminal
